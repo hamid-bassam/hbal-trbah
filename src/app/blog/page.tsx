@@ -111,6 +111,7 @@ const categories = [
   "Santé",
   "Productivité",
   "Développement Personnel",
+  "Innovation",
   "Finances",
   "Lifestyle",
   "Musique",
