@@ -23,7 +23,7 @@ const articles = [
     category: "Technologie",
     isPopular: true,
     date: "27 Nov 2024",
-    readTime: "12 min"
+    readTime: "10 min"
   },
   {
     id: 1,
@@ -42,7 +42,7 @@ export function Blog() {
   return (
     <section className="mb-12">
       <h2 className="text-2xl font-bold mb-6">Tous les Articles</h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6  md:grid-cols-2 lg:grid-cols-3">
         {articles.map(article => (
           <Card key={article.id} className="flex flex-col">
             <CardHeader className="p-0">
