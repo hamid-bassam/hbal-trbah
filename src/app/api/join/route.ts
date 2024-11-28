@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     }
 
     // Enregistrez les données dans la base de données
-    const result = await prisma.user.create({
+    const result = await prisma.subscriber.create({
       data: {
         name,
         email,
