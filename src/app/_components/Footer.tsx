@@ -1,4 +1,5 @@
-import { Instagram, Linkedin, InstagramIcon as TiktokIcon } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
+// InstagramIcon as TiktokIcon } from 'lucide-react'
 import Link from "next/link"
 
 export function Footer() {
@@ -16,7 +17,7 @@ export function Footer() {
               <Instagram className="h-6 w-6" />
               <span className="sr-only">Instagram</span>
             </Link>
-            <Link
+            {/* <Link
               href="https://tiktok.com"
               className="text-muted-foreground hover:text-foreground transition-colors"
               target="_blank"
@@ -24,7 +25,7 @@ export function Footer() {
             >
               <TiktokIcon className="h-6 w-6" />
               <span className="sr-only">TikTok</span>
-            </Link>
+            </Link> */}
             <Link
               href="https://www.linkedin.com/in/hamid-bassam-802334207/"
               className="text-muted-foreground hover:text-foreground transition-colors"
