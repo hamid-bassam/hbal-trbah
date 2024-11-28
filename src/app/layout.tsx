@@ -1,5 +1,8 @@
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Footer } from "./_components/Footer";
+import { Header } from "./_components/Header";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,9 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen bg-background`}
       >
-        {children}
+        <div className="min-h-screen bg-background text-foreground">
+          <Header />
+          <main>
+            {children}
+            <Toaster />
+          </main>
+        </div>
+        <Footer />
       </body>
     </html>
   );
