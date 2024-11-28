@@ -38,7 +38,7 @@ const articles = [
     category: "Technologie",
     isPopular: true,
     date: "27 Nov 2024",
-    readTime: "12 min"
+    readTime: "10 min"
   }
   // {
   //   id: 2,

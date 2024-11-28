@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { CheckCircle2, Clock, Code2, Database, Globe, Palette, Rocket } from 'lucide-react'
 import { Metadata } from "next"
+
 import { Alert, AlertDescription } from "../../../components/ui/alert"
 
 export const metadata: Metadata = {
@@ -40,17 +41,17 @@ export default function BuildPlatformPage() {
               Découvrez comment transformer votre vision en réalité en un temps record.
             </p>
           </div>
-
-          <Alert className="mb-8">
-            <Clock className="h-4 w-4" />
-            <AlertDescription>
-              Planning suggéré : Domaine (30min) → Setup (30min) → Base de données (1h) →
-              UI (1h30) → Déploiement (30min)
+          <Alert className="flex flex-col items-start gap-4 mb-8 sm:flex-row sm:items-center sm:gap-2">
+            <Clock className="h-5 w-5 text-primary flex-shrink-0" />
+            <AlertDescription className="text-sm sm:text-base">
+              <span className="block sm:inline">Planning suggéré :</span>
+              <span className="block sm:inline"> Domaine (30min) → Setup (30min) → Base de données (1h) → UI (1h30) → Déploiement (30min)</span>
             </AlertDescription>
           </Alert>
 
-          <div className="grid gap-8">
-            <Card className="p-6">
+
+          <div className="grid gap-8 mt-12">
+            <Card className=" p-6">
               <div className="flex items-start gap-4">
                 <Globe className="h-8 w-8 text-primary flex-shrink-0" />
                 <div>
@@ -81,7 +82,7 @@ export default function BuildPlatformPage() {
                     la production.
                   </p>
                   <div className="bg-muted p-4 rounded-lg mb-4">
-                    <pre className="font-mono text-sm">
+                    <pre className="font-mono text-sm whitespace-pre-wrap">
                       npx create-next-app@latest mon-projet --typescript --tailwind --use-npm
                     </pre>
                   </div>
@@ -104,7 +105,7 @@ export default function BuildPlatformPage() {
                     garantit la sécurité type de vos requêtes.
                   </p>
                   <div className="bg-muted p-4 rounded-lg mb-4">
-                    <pre className="font-mono text-sm">
+                    <pre className="font-mono text-sm whitespace-pre-wrap">
                       npm install @prisma/client prisma
                       npx prisma init
                     </pre>
@@ -138,7 +139,7 @@ export default function BuildPlatformPage() {
               </div>
             </Card>
 
-            <Card className="p-6">
+            <Card className="p-4">
               <div className="flex items-start gap-4">
                 <Rocket className="h-8 w-8 text-primary flex-shrink-0" />
                 <div>
@@ -148,7 +149,7 @@ export default function BuildPlatformPage() {
                     continue, chaque modification est automatiquement déployée en production.
                   </p>
                   <div className="bg-muted p-4 rounded-lg mb-4">
-                    <pre className="font-mono text-sm">
+                    <pre className="font-mono text-sm whitespace-pre-wrap">
                       git push origin main # Vercel s'occupe du reste !
                     </pre>
                   </div>
