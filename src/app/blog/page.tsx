@@ -225,7 +225,7 @@ export default function BlogPage() {
             <Calendar className="h-6 w-6" />
             Article du Jour</h2>
           {articles.length > 0 && (
-            <Card className="flex flex-col lg:flex-row gap-6">
+            <Card className="flex flex-col md:flex-row lg:flex-row gap-6">
               <Image
                 src={articles[0].image} // Choisissez l'article du jour (ici, le premier)
                 alt={articles[0].title}
@@ -248,8 +248,8 @@ export default function BlogPage() {
                   </Link>
                 </h3>
                 <p className="text-muted-foreground mb-6">{articles[0].summary}</p>
-                <div className="flex">
-                  <Button variant="default" asChild className="ml-auto">
+                <div className="flex mt-auto">
+                  <Button variant="default" asChild className="ml-auto ">
                     <Link href={`/blog/${articles[0].slug}`}>
                       Lire l'article <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
