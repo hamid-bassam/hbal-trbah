@@ -8,6 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
 import dev from "../../assets/images/dev.webp"
+import longevity from "../../assets/images/longevity.webp"
 import { Separator } from "../../components/ui/separator"
 import { NewsletterSubscriberForm } from "../_components/NewsLetterSubscriberForm"
 
@@ -18,6 +19,17 @@ export const metadata: Metadata = {
 }
 
 const articles = [
+  {
+    id: 3,
+    title: "Transformez Votre Corps et Votre Esprit : Les 5 Habitudes Qui Allongent Votre Vie",
+    slug: "transformer-corps-et-esprit",
+    summary: "Découvrez comment 5 habitudes simples (ne pas fumer, ne pas boire, bien manger, bien dormir, faire de l'exercice) peuvent régénérer votre corps, booster votre énergie et réduire drastiquement les effets du vieillissement.",
+    image: longevity, // Assurez-vous d'importer l'image correspondante dans votre projet
+    category: "Santé",
+    isPopular: true,
+    date: "28 Nov 2024",
+    readTime: "8 min"
+  },
   {
     id: 1,
     title: "Les Bienfaits de la Douche Froide",
@@ -192,28 +204,68 @@ export default function BlogPage() {
           </div> */}
           <div className="flex flex-col items-center justify-center bg-secondary text-secondary-foreground py-16 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold mb-4 text-center">Un espace pour l'excellence</h2>
-            <p className="text-lg mb-6 text-center max-w-[600px]">
+            <p className="text-lg mb-2 text-center max-w-[600px]">
               Découvrez les articles les mieux notés par nos lecteurs. Ici, nous mettons en avant les contenus les plus inspirants, informatifs et appréciés.
               Revenez bientôt pour explorer cette section remplie de pépites !
             </p>
-            <div className="flex justify-center gap-4">
-              <Button variant="default" className="px-6 py-3">
+            {/* <div className="flex justify-center gap-4">
+               <Button variant="default" className="px-6 py-3">
                 Découvrir les articles populaires
               </Button>
-              <Button variant="outline" className="px-6 py-3">
+             <Button variant="outline" className="px-6 py-3">
                 Voir tous les articles
-              </Button>
-            </div>
+              </Button> 
+            </div> */}
           </div>
         </section>
 
+        {/* article du jour  */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Calendar className="h-6 w-6" />
+            Article du Jour</h2>
+          {articles.length > 0 && (
+            <Card className="flex flex-col lg:flex-row gap-6">
+              <Image
+                src={articles[0].image} // Choisissez l'article du jour (ici, le premier)
+                alt={articles[0].title}
+                width={600}
+                height={300}
+                className="rounded-lg object-cover lg:w-1/2"
+              />
+              <div className="flex flex-col flex-1 p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge variant="outline">{articles[0].category}</Badge>
+                  <Separator orientation="vertical" className="h-4" />
+                  <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                    <BookOpen className="h-4 w-4" />
+                    <span>{articles[0].readTime}</span>
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold mb-4">
+                  <Link href={`/blog/${articles[0].slug}`} className="hover:underline">
+                    {articles[0].title}
+                  </Link>
+                </h3>
+                <p className="text-muted-foreground mb-6">{articles[0].summary}</p>
+                <div className="flex">
+                  <Button variant="default" asChild className="ml-auto">
+                    <Link href={`/blog/${articles[0].slug}`}>
+                      Lire l'article <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          )}
+        </section>
 
 
         {/* All Articles */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6">Tous les Articles</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {articles.map(article => (
+            {articles.slice(1).map(article => (
               <Card key={article.id} className="flex flex-col">
                 <CardHeader className="p-0">
                   <Image
