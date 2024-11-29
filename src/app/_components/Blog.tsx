@@ -11,9 +11,21 @@ import Image from "next/image"
 import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
 import dev from "../../assets/images/dev.webp"
+import longevity from "../../assets/images/longevity.webp"
 import { Badge } from "../../components/ui/badge"
 import { Separator } from "../../components/ui/separator"
 const articles = [
+  {
+    id: 3,
+    title: "Transformez Votre Corps et Votre Esprit : Les 5 Habitudes Qui Allongent Votre Vie",
+    slug: "transformer-corps-et-esprit",
+    summary: "Découvrez comment 5 habitudes simples (ne pas fumer, ne pas boire, bien manger, bien dormir, faire de l'exercice) peuvent régénérer votre corps, booster votre énergie et réduire drastiquement les effets du vieillissement.",
+    image: longevity, // Assurez-vous d'importer l'image correspondante dans votre projet
+    category: "Santé",
+    isPopular: true,
+    date: "28 Nov 2024",
+    readTime: "8 min"
+  },
   {
     id: 2,
     title: "Construire une Plateforme Complète en 4 Heures",
@@ -36,6 +48,7 @@ const articles = [
     date: "26 Nov 2024",
     readTime: "5 min"
   },
+
 
 ]
 export function Blog() {
