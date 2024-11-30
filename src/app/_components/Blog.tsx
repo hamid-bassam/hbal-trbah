@@ -12,9 +12,22 @@ import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
 import dev from "../../assets/images/dev.webp"
 import longevity from "../../assets/images/longevity.webp"
+import one_percent from "../../assets/images/one-percent-cover.webp"
+
 import { Badge } from "../../components/ui/badge"
 import { Separator } from "../../components/ui/separator"
 const articles = [
+  {
+    id: 4,
+    title: "La Règle des 1% : Transformez Votre Vie Petit à Petit",
+    slug: "regle-des-1-pourcent",
+    summary: "Découvrez comment appliquer la règle des 1% pour améliorer votre vie de façon exponentielle grâce à de petites actions quotidiennes. Inspiré par Atomic Habits, ce concept montre que chaque petit pas compte.",
+    image: one_percent, // Importez l'image du graphe généré dans votre projet
+    category: "Productivité",
+    isPopular: true,
+    date: "29 Nov 2024",
+    readTime: "4 min"
+  },
   {
     id: 3,
     title: "Transformez Votre Corps et Votre Esprit : Les 5 Habitudes Qui Allongent Votre Vie",

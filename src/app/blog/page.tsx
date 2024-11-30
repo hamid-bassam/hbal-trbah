@@ -9,7 +9,11 @@ import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
 import dev from "../../assets/images/dev.webp"
 import longevity from "../../assets/images/longevity.webp"
+import one_percent from "../../assets/images/one-percent-cover.webp"
+import one_percent_graph from "../../assets/images/one_percent_rule_graph.png"
+
 import { Separator } from "../../components/ui/separator"
+import { Article, ArticleOfTheDay } from "../_components/ArtcileOfTheDay"
 import { NewsletterSubscriberForm } from "../_components/NewsLetterSubscriberForm"
 
 export const metadata: Metadata = {
@@ -19,6 +23,17 @@ export const metadata: Metadata = {
 }
 
 const articles = [
+  {
+    id: 4,
+    title: "La Règle des 1% : Transformez Votre Vie Petit à Petit",
+    slug: "regle-des-1-pourcent",
+    summary: "Découvrez comment appliquer la règle des 1% pour améliorer votre vie de façon exponentielle grâce à de petites actions quotidiennes. Inspiré par Atomic Habits, ce concept montre que chaque petit pas compte.",
+    image: one_percent, // Importez l'image du graphe généré dans votre projet
+    category: "Productivité",
+    isPopular: true,
+    date: "29 Nov 2024",
+    readTime: "4 min"
+  },
   {
     id: 3,
     title: "Transformez Votre Corps et Votre Esprit : Les 5 Habitudes Qui Allongent Votre Vie",
@@ -220,7 +235,10 @@ export default function BlogPage() {
         </section>
 
         {/* article du jour  */}
-        <section className="mb-12">
+        <ArticleOfTheDay article={articles[0] as unknown as Article} >
+          <Image src={one_percent_graph.src} alt="La Règle des 1%" width={800} height={450} className="rounded-lg mb-4" />
+        </ArticleOfTheDay>
+        {/* <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Calendar className="h-6 w-6" />
             Article du Jour</h2>
@@ -258,7 +276,9 @@ export default function BlogPage() {
               </div>
             </Card>
           )}
-        </section>
+        </section> */}
+
+
 
 
         {/* All Articles */}
