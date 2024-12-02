@@ -12,12 +12,24 @@ import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
 import cryptoImage from "../../assets/images/cryptoImage.webp"
 import dev from "../../assets/images/dev.webp"
+import elasticityImage from "../../assets/images/elasticityImage.webp"
 import longevity from "../../assets/images/longevity.webp"
 import one_percent from "../../assets/images/one-percent-cover.webp"
 
 import { Badge } from "../../components/ui/badge"
 import { Separator } from "../../components/ui/separator"
 const articles = [
+  {
+    id: 6,
+    title: "L'Élasticité Cérébrale : Développer son Potentiel Mental",
+    slug: "elasticite-cerebrale",
+    summary: "Découvrez comment entraîner votre cerveau pour apprendre, créer et s'adapter avec plus d'efficacité. Explorez des méthodes concrètes pour développer votre potentiel cognitif.",
+    image: elasticityImage, // Assurez-vous de placer l'image dans le dossier public
+    category: "Développement Personnel",
+    isPopular: true,
+    date: "01 Déc 2024",
+    readTime: "5 min"
+  },
   {
     id: 5,
     title: "La Réalité des Shitcoins : Entre Volatilité et Illusions",

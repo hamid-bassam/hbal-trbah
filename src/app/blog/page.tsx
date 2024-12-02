@@ -9,9 +9,10 @@ import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
 import cryptoImage from "../../assets/images/cryptoImage.webp"
 import dev from "../../assets/images/dev.webp"
+import elastic_vs_linear_divergence from "../../assets/images/elastic_vs_linear_divergence.png"
+import elasticityImage from "../../assets/images/elasticityImage.webp"
 import longevity from "../../assets/images/longevity.webp"
 import one_percent from "../../assets/images/one-percent-cover.webp"
-import one_percent_graph from "../../assets/images/one_percent_rule_graph.png"
 
 import { Separator } from "../../components/ui/separator"
 import { Article, ArticleOfTheDay } from "../_components/ArtcileOfTheDay"
@@ -24,6 +25,18 @@ export const metadata: Metadata = {
 }
 
 const articles = [
+  {
+    id: 6,
+    title: "L'Élasticité Cérébrale : Développer son Potentiel Mental",
+    slug: "elasticite-cerebrale",
+    summary: "Découvrez comment entraîner votre cerveau pour apprendre, créer et s'adapter avec plus d'efficacité. Explorez des méthodes concrètes pour développer votre potentiel cognitif.",
+    image: elasticityImage, // Assurez-vous de placer l'image dans le dossier public
+    category: "Développement Personnel",
+    isPopular: true,
+    date: "01 Déc 2024",
+    readTime: "5 min",
+    attachement: elastic_vs_linear_divergence,
+  },
   {
     id: 5,
     title: "La Réalité des Shitcoins : Entre Volatilité et Illusions",
@@ -248,7 +261,7 @@ export default function BlogPage() {
 
         {/* article du jour  */}
         <ArticleOfTheDay article={articles[0] as unknown as Article} >
-          <Image src={one_percent_graph.src} alt="La Règle des 1%" width={800} height={450} className="rounded-lg mb-4" />
+          {articles[0].attachement ? <Image src={articles[0].attachement.src} alt="La Règle des 1%" width={800} height={450} className="rounded-lg mb-4" /> : null}
         </ArticleOfTheDay>
         {/* <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
