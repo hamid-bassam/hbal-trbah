@@ -26,7 +26,7 @@ const articles = [
     image: cryptoImage, // Importez l'image du graphe généré dans votre projet
     category: "Cryptomonnaies",
     isPopular: true,
-    date: "01 Déc 2024",
+    date: "30 Nov 2024",
     readTime: "5 min"
   },
   {
