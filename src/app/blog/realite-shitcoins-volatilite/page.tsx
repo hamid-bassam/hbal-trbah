@@ -27,7 +27,7 @@ export default function CryptoGuidePage() {
         </h1>
         <div className="flex items-center justify-center gap-2 text-muted-foreground">
           <BookOpen className="h-4 w-4" />
-          <span>Temps de lecture : 6 minutes</span>
+          <span>Temps de lecture : 5 minutes</span>
         </div>
       </header>
 

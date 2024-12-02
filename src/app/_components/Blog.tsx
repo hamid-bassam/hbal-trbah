@@ -10,6 +10,7 @@ import { ArrowRight, BookOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import cold from "../../assets/images/cold.webp"
+import cryptoImage from "../../assets/images/cryptoImage.webp"
 import dev from "../../assets/images/dev.webp"
 import longevity from "../../assets/images/longevity.webp"
 import one_percent from "../../assets/images/one-percent-cover.webp"
@@ -17,6 +18,17 @@ import one_percent from "../../assets/images/one-percent-cover.webp"
 import { Badge } from "../../components/ui/badge"
 import { Separator } from "../../components/ui/separator"
 const articles = [
+  {
+    id: 5,
+    title: "La Réalité des Shitcoins : Entre Volatilité et Illusions",
+    slug: "realite-shitcoins-volatilite",
+    summary: "Découvrez pourquoi la majorité des shitcoins perdent leur valeur en quelques mois. Cet article éducatif met en lumière les risques liés à ces cryptomonnaies et comment éviter les pièges d’un marché volatil.",
+    image: cryptoImage, // Importez l'image du graphe généré dans votre projet
+    category: "Cryptomonnaies",
+    isPopular: true,
+    date: "01 Déc 2024",
+    readTime: "5 min"
+  },
   {
     id: 4,
     title: "La Règle des 1% : Transformez Votre Vie Petit à Petit",
