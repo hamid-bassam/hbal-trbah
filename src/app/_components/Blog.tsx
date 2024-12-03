@@ -13,12 +13,24 @@ import cold from "../../assets/images/cold.webp"
 import cryptoImage from "../../assets/images/cryptoImage.webp"
 import dev from "../../assets/images/dev.webp"
 import elasticityImage from "../../assets/images/elasticityImage.webp"
+import energyBalanceCoverImage from "../../assets/images/energy-balance-coverr.webp"
 import longevity from "../../assets/images/longevity.webp"
 import one_percent from "../../assets/images/one-percent-cover.webp"
 
 import { Badge } from "../../components/ui/badge"
 import { Separator } from "../../components/ui/separator"
 const articles = [
+  {
+    id: 9,
+    title: "L’Équilibre Énergétique : La Clé d’une Vie Sereine et Productive",
+    slug: "equilibre-energetique",
+    summary: "Explorez comment équilibrer vos dépenses et apports énergétiques pour une santé optimale et une meilleure productivité.",
+    image: energyBalanceCoverImage, // L'image de couverture sera générée ensuite
+    category: "Bien-être",
+    isPopular: true,
+    date: "02 Déc 2024",
+    readTime: "6 min"
+  },
   {
     id: 6,
     title: "L'Élasticité Cérébrale : Développer son Potentiel Mental",
