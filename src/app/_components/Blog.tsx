@@ -17,11 +17,24 @@ import energyBalanceCoverImage from "../../assets/images/energy-balance-coverr.w
 import longevity from "../../assets/images/longevity.webp"
 import one_percent from "../../assets/images/one-percent-cover.webp"
 
+import recul_cover from "../../assets/images/recul_couverture.webp"
 import { Badge } from "../../components/ui/badge"
 import { Separator } from "../../components/ui/separator"
+
 const articles = [
   {
-    id: 9,
+    id: 8,
+    title: "L'Importance du Recul et de l'Amélioration Continue",
+    slug: "recul-et-amelioration-continue",
+    summary: "Découvrez pourquoi le recul et l'amélioration continue sont des piliers pour progresser dans un monde en mouvement constant. Apprenez à intégrer ces concepts dans votre quotidien.",
+    image: recul_cover, // L'image de couverture sera générée ensuite
+    category: "Développement personnel",
+    isPopular: true,
+    date: "12 Déc 2024",
+    readTime: "6 min",
+  },
+  {
+    id: 7,
     title: "L’Équilibre Énergétique : La Clé d’une Vie Sereine et Productive",
     slug: "equilibre-energetique",
     summary: "Explorez comment équilibrer vos dépenses et apports énergétiques pour une santé optimale et une meilleure productivité.",
