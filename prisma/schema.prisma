@@ -31,6 +31,12 @@ model User {
   sessions      Session[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
+
+
+  //specific DAR 
+
+  activities    Activity[]
+  goals         TemporaryActivityDurationGoal[]
  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -89,4 +95,56 @@ model Authenticator {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
  
   @@id([userId, credentialID])
+}
+
+// Activity Tracking
+model Activity {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  dimension   String    // Type d'activité (e.g., "meditation", "coding")
+  startTime   DateTime
+  endTime     DateTime
+  duration    Int       // Durée en minutes
+  date        DateTime  @default(now())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([userId, date])
+  @@index([userId, dimension])
+}
+
+
+// Temporary Activity Goals with History
+model TemporaryActivityDurationGoal {
+  id              String                      @id @default(cuid())
+  userId          String
+  user            User                       @relation(fields: [userId], references: [id])
+  dimension       String                      // Type ou catégorie d'activité
+  currentTarget   Int                         // Objectif actuel (en minutes)
+  type            GoalType                    // MINIMUM ou MAXIMUM
+  active          Boolean                     @default(true)
+  history         ActivityDurationGoalHistory[]
+  createdAt       DateTime                    @default(now())
+  updatedAt       DateTime                    @updatedAt
+
+  @@index([userId, dimension])
+  @@index([userId, active])
+}
+
+model ActivityDurationGoalHistory {
+  id                     String                      @id @default(cuid())
+  goalId                 String
+  goal                   TemporaryActivityDurationGoal @relation(fields: [goalId], references: [id])
+  previousTargetMinutes  Int                         // Ancien objectif
+  newTargetMinutes       Int                         // Nouvel objectif
+  changedAt              DateTime                    @default(now()) // Date de modification
+
+  @@index([goalId, changedAt])
+}
+
+// Enum for goal types
+enum GoalType {
+  MINIMUM
+  MAXIMUM
 }
