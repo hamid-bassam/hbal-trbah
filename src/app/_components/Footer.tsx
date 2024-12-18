@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Instagram, Linkedin } from 'lucide-react'
-// InstagramIcon as TiktokIcon } from 'lucide-react'
 import Link from "next/link"
 
 export function Footer() {
@@ -7,6 +7,7 @@ export function Footer() {
     <footer className="w-full border-t bg-muted">
       <div className="container py-12">
         <div className="flex flex-col items-center justify-center space-y-4">
+          {/* Liens vers les réseaux sociaux */}
           <div className="flex space-x-4">
             <Link
               href="https://www.instagram.com/reel/DC284CDKzez/"
@@ -17,15 +18,6 @@ export function Footer() {
               <Instagram className="h-6 w-6" />
               <span className="sr-only">Instagram</span>
             </Link>
-            {/* <Link
-              href="https://tiktok.com"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TiktokIcon className="h-6 w-6" />
-              <span className="sr-only">TikTok</span>
-            </Link> */}
             <Link
               href="https://www.linkedin.com/in/hamid-bassam-802334207/"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -36,7 +28,25 @@ export function Footer() {
               <span className="sr-only">LinkedIn</span>
             </Link>
           </div>
-          <p className="text-sm text-muted-foreground">
+
+          {/* Navigation interne */}
+          <div className="flex space-x-4 text-sm text-muted-foreground">
+            <Link
+              href="/terms"
+              className="hover:underline"
+            >
+              Conditions d'Utilisation
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="hover:underline"
+            >
+              Politique de Confidentialité
+            </Link>
+          </div>
+
+          {/* Copyright */}
+          <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} Hbal Trbah. Tous droits réservés.
           </p>
         </div>
@@ -44,4 +54,3 @@ export function Footer() {
     </footer>
   )
 }
-
