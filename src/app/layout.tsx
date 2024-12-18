@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
+import { SessionProvider } from "next-auth/react";
 import localFont from "next/font/local";
 import { cn } from "../lib/utils";
 import { Footer } from "./_components/Footer";
@@ -30,14 +31,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(geistSans.variable, geistMono.variable, "antialiased bg-background")}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
-          <Header />
-          <main>
-            {children}
-            <Toaster />
-          </main>
-          <Footer />
-        </div>
+        <SessionProvider> {/* Wrap the application with SessionProvider */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
+            <Header />
+            <main>
+              {children}
+              <Toaster />
+            </main>
+            <Footer />
+          </div>
+        </SessionProvider>
       </body>
     </html>
   )

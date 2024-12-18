@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Menu } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { UserMenu } from "./userMenu"
 
 export function MobileNavigation(props: { open?: boolean }) {
   const [isSheetOpen, setIsSheetOpen] = useState(props.open ?? false)
@@ -20,12 +21,12 @@ export function MobileNavigation(props: { open?: boolean }) {
           </Button>
         </SheetTrigger>
         {/* Navigation Content */}
-        <SheetContent aria-describedby={undefined} side="left" className="bg-background p-4">
+        <SheetContent aria-describedby={undefined} side="left" className="bg-background p-4 h-full flex flex-col">
           <SheetTitle>Menu</SheetTitle>
           {/* <SheetHeader>
             <h2 className="text-xl font-bold">Menu</h2>
           </SheetHeader> */}
-          <nav className="flex flex-col space-y-2 mt-4">
+          <nav className="flex flex-col space-y-2 mt-4 flex-grow">
             <Link onClick={() => setIsSheetOpen(false)} href="/" className="text-lg font-medium hover:text-primary">
               Accueil
             </Link>
@@ -35,8 +36,16 @@ export function MobileNavigation(props: { open?: boolean }) {
             <Link onClick={() => setIsSheetOpen(false)} href="/contact" className="text-lg font-medium hover:text-primary">
               Contact
             </Link>
-            <JoinAdventureButton className="mt-4 block " />
+            {/* CTA */}
+            <JoinAdventureButton className="mt-4 block" />
+
+            {/* Separator */}
+            <div className="border-t border-muted my-4"></div>
+            {/* UserMenu */}
           </nav>
+          <div className="mt-auto">
+            <UserMenu />
+          </div>
 
         </SheetContent>
       </Sheet>

@@ -11,6 +11,7 @@ import featureImage3 from "@/assets/images/time-forge/feature-kpis.webp";
 import featureImage1 from "@/assets/images/time-forge/feature-reporting.webp";
 import heroImage from "@/assets/images/time-forge/hero1.webp";
 import { motion } from "framer-motion";
+import { SignInButton } from "../_components/auth/SignInButton";
 
 export default function DARLandingPage() {
   return (
@@ -31,9 +32,8 @@ export default function DARLandingPage() {
             dans ta gestion et atteins tes objectifs !"
           </p>
           <div className="flex justify-center gap-4 mt-6">
-            <Button asChild>
-              <Link href="/dar-app/auth">Commence maintenant</Link>
-            </Button>
+            <SignInButton label="Commencer maintenant !" provider="google" callbackUrl="/time-forge-app/daily-reporting" />
+
             <Button variant="outline" asChild>
               <Link href="#features">En savoir plus</Link>
             </Button>
@@ -143,9 +143,9 @@ export default function DARLandingPage() {
           <h2 className="text-3xl font-bold">
             Prêt à transformer votre gestion du temps ?
           </h2>
-          <Button size="lg" asChild>
-            <Link href="/dar-app/auth">Rejoignez-nous maintenant</Link>
-          </Button>
+
+          <SignInButton label="Commencer maintenant !" provider="google" callbackUrl="/time-forge-app/daily-reporting" size="lg" />
+
         </motion.div>
       </section>
     </div>

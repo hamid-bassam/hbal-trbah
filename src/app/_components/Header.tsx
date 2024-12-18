@@ -4,6 +4,7 @@
 import Link from "next/link"
 import { JoinAdventureButton } from "./JoinAdventureButton"
 import { MobileNavigation } from "./MobileNavigation"
+import { UserMenu } from "./userMenu"
 
 export function Header() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,7 +37,10 @@ export function Header() {
           <Link href="/contact" className="text-lg font-medium hover:text-primary">
             Contact
           </Link>
-          <JoinAdventureButton />
+          <div className="flex items-center gap-4">
+            <JoinAdventureButton />
+            <UserMenu />
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}

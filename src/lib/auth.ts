@@ -23,13 +23,25 @@ export const { auth, handlers } = NextAuth({
   },
   callbacks: {
     async session({ session, token }) {
-      if (token) {
-        if (token.sub) {
-          session.user.id = token.sub;
-        }
+      // Enrichissement des informations utilisateur
+      if (token?.sub) {
+        session.user.id = token.sub;
+        session.user.name = token.name || session.user.name;
+        session.user.email = token.email || session.user.email;
+        session.user.image = token.picture || session.user.image;
       }
       return session;
     },
   },
+  // callbacks: {
+  //   async session({ session, token }) {
+  //     if (token) {
+  //       if (token.sub) {
+  //         session.user.id = token.sub;
+  //       }
+  //     }
+  //     return session;
+  //   },
+  // },
   secret: process.env.AUTH_SECRET, // Ajoutez une clé secrète
 })
