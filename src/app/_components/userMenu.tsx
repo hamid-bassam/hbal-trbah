@@ -33,7 +33,7 @@ export const UserMenu: React.FC = () => {
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar className="h-8 w-8">
-          <AvatarImage src={user?.image || "/default-avatar.png"} alt={user?.name || "Avatar"} />
+          <AvatarImage src={user?.image || "/default-avatar.png"} alt={user?.name || "Avatar"} className="rounded-full border-2  " />
           <AvatarFallback>{user?.name?.charAt(0).toUpperCase() || "?"}</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
