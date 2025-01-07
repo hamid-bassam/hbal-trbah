@@ -15,6 +15,8 @@ import energyBalanceCoverImage from "../../assets/images/energy-balance-coverr.w
 import energyBalanceGraph from "../../assets/images/energy-balance-graph.webp"
 import longevity from "../../assets/images/longevity.webp"
 import one_percent from "../../assets/images/one-percent-cover.webp"
+import plateauCover from "../../assets/images/plateau-couverture.webp"
+import plateau_graph from "../../assets/images/plateau-intermediaire.png"
 import recul_attach from "../../assets/images/recul_attach.webp"
 import recul_cover from "../../assets/images/recul_couverture.webp"
 
@@ -30,6 +32,18 @@ export const metadata: Metadata = {
 }
 
 const articles = [
+  {
+    id: 9,
+    title: "Le Plateau de l'Évolution et la Persévérance",
+    slug: "plateau-evolution",
+    summary: "Découvrez comment surmonter le plateau de l'évolution et transformer une phase de stagnation en opportunité de croissance.",
+    image: plateauCover, // Placez l'image dans le dossier public
+    category: "Croissance Personnelle",
+    isPopular: false,
+    date: "07 Jan 2025",
+    readTime: "4 min",
+    attachement: plateau_graph,
+  },
   {
     id: 8,
     title: "L'Importance du Recul et de l'Amélioration Continue",
