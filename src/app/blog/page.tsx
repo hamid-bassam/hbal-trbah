@@ -38,7 +38,7 @@ const articles = [
     id: 10,
     title: "Surmonter les Obstacles : Une Quête sans Excuse ni Justification",
     slug: "zero-excuses",
-    summary: "dépasser les excuses et transformer les épreuves en tremplins pour avancer avec clarté et détermination. Un partage sincère d'outils et d'histoires pour agir avec résilience et discipline.",
+    summary: "Dépasser les excuses et transformer les épreuves en tremplins pour avancer avec clarté et détermination. Un partage sincère d'outils et d'histoires pour agir avec résilience et discipline.",
     image: zeroExcusesCover, // Placez l'image dans le dossier public
     category: "Développement Personnel",
     isPopular: false,
