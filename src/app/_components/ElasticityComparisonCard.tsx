@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { TrendingUp } from "lucide-react";
 import Image from "next/image";
-import elastic_vs_linear_graph from "../../assets/images/elastic_vs_linear_divergence.png";
+import elastic_vs_linear_graph from "../../assets/images/blog/graphs/elastic_vs_linear_divergence.png";
 
 export const ElasticityComparisonCard = () => {
   return (

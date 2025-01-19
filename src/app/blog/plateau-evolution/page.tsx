@@ -6,7 +6,7 @@ import { ChartNoAxesColumnDecreasing, CircleHelp, Lightbulb, TrendingUp } from "
 import { Metadata } from "next";
 
 import Image from "next/image";
-import plateauCover from "../../../assets/images/plateau-couverture.webp";
+import plateauCover from "../../../assets/images/blog/covers/plateau-couverture.webp";
 import { PlateauEvolutionGraphCard } from "../../_components/PlateauEvolutionGraphCard";
 
 

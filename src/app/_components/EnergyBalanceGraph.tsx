@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { TrendingUp } from "lucide-react";
 import Image from "next/image";
-import energyBalanceGraph from "../../assets/images/energy-output.png";
+import energyBalanceGraph from "../../assets/images/blog/graphs/energy-output.png";
 
 export const EnergyBalanceGraphCard = () => {
   return (

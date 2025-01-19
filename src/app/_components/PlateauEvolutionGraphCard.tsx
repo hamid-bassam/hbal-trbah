@@ -2,7 +2,7 @@
 import { Card } from "@/components/ui/card";
 import { TrendingUp } from "lucide-react";
 import Image from "next/image";
-import plateauEvolutionGraph from "../../assets/images/plateau-intermediaire.png";
+import plateauEvolutionGraph from "../../assets/images/blog/graphs/plateau-intermediaire.png";
 
 export const PlateauEvolutionGraphCard = () => {
   return (

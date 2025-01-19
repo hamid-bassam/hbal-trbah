@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { TrendingUp } from "lucide-react";
 import Image from "next/image";
-import continuousImprovementGraph from "../../assets/images/continuous_improvment_graph.webp";
+import continuousImprovementGraph from "../../assets/images/blog/graphs/continuous_improvment_graph.webp";
 
 export const ContinuousImprovementGraphCard = () => {
   return (

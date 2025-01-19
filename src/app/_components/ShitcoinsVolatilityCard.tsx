@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { TrendingDown } from "lucide-react";
 import Image from "next/image";
-import shitcoins_volatility_graph from "../../assets/images/shitcoins_volatility_graph.png";
+import shitcoins_volatility_graph from "../../assets/images/blog/graphs/shitcoins_volatility_graph.png";
 
 export const ShitcoinsVolatilityCard = () => {
   return (

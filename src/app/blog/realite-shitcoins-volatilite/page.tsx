@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { BookOpen, Coins, MessageCircleWarning, ShieldCheck } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import cryptoImage from "../../../assets/images/cryptoImage.webp";
+import cryptoImage from "../../../assets/images/blog/covers/cryptoImage.webp";
 import { ShitcoinsVolatilityCard } from "../../_components/ShitcoinsVolatilityCard";
 
 export const metadata: Metadata = {

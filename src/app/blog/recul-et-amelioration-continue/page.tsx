@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { BarChart, Clock } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import coverImage from "../../../assets/images/recul_couverture.webp";
+import coverImage from "../../../assets/images/blog/covers/recul_couverture.webp";
 import { ContinuousImprovementGraphCard } from "../../_components/ContinuousImprovmentGraphCard";
 
 

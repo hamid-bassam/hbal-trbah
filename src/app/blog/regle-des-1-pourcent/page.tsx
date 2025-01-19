@@ -6,7 +6,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Clock, LineChart, TrendingUp } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import onePercent from "../../../assets/images/one_percent_rule_graph.png";
+import onePercent from "../../../assets/images/blog/covers/one-percent-cover.webp";
 
 export const metadata: Metadata = {
   title: "La Règle des 1% : Comment Les Petites Actions Changent Tout | Hbal Trbah",

@@ -6,19 +6,21 @@ import { ArrowRight, BookOpen, Calendar, Sparkles, TrendingUp } from 'lucide-rea
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import cold from "../../assets/images/cold.webp"
-import cryptoImage from "../../assets/images/cryptoImage.webp"
-import dev from "../../assets/images/dev.webp"
-import elastic_vs_linear_divergence from "../../assets/images/elastic_vs_linear_divergence.png"
-import elasticityImage from "../../assets/images/elasticityImage.webp"
-import energyBalanceCoverImage from "../../assets/images/energy-balance-coverr.webp"
-import energyBalanceGraph from "../../assets/images/energy-balance-graph.webp"
-import longevity from "../../assets/images/longevity.webp"
-import one_percent from "../../assets/images/one-percent-cover.webp"
-import plateauCover from "../../assets/images/plateau-couverture.webp"
-import plateau_graph from "../../assets/images/plateau-intermediaire.png"
-import recul_attach from "../../assets/images/recul_attach.webp"
-import recul_cover from "../../assets/images/recul_couverture.webp"
+import cold from "../../assets/images/blog/covers/cold.webp"
+import cryptoImage from "../../assets/images/blog/covers/cryptoImage.webp"
+import dev from "../../assets/images/blog/covers/dev.webp"
+import elasticityImage from "../../assets/images/blog/covers/elasticityImage.webp"
+import energyBalanceCoverImage from "../../assets/images/blog/covers/energy-balance-coverr.webp"
+import longevity from "../../assets/images/blog/covers/longevity.webp"
+import one_percent from "../../assets/images/blog/covers/one-percent-cover.webp"
+import plateauCover from "../../assets/images/blog/covers/plateau-couverture.webp"
+import recul_cover from "../../assets/images/blog/covers/recul_couverture.webp"
+import zeroExcusesCover from "../../assets/images/blog/covers/zero_excuses_cover.png"
+import elastic_vs_linear_divergence from "../../assets/images/blog/graphs/elastic_vs_linear_divergence.png"
+import energyBalanceGraph from "../../assets/images/blog/graphs/energy-balance-graph.webp"
+import plateau_graph from "../../assets/images/blog/graphs/plateau-intermediaire.png"
+import recul_attach from "../../assets/images/blog/graphs/recul_attach.webp"
+
 
 
 import { Separator } from "../../components/ui/separator"
@@ -32,6 +34,17 @@ export const metadata: Metadata = {
 }
 
 const articles = [
+  {
+    id: 10,
+    title: "Surmonter les Obstacles : Une Quête sans Excuse ni Justification",
+    slug: "zero-excuses",
+    summary: "Découvrez comment transformer les obstacles en opportunités et dépasser les limites imposées par les excuses et les justifications. Un guide pratique et inspirant pour agir avec résilience et discipline.",
+    image: zeroExcusesCover, // Placez l'image dans le dossier public
+    category: "Développement Personnel",
+    isPopular: false,
+    date: "19 Jan 2025",
+    readTime: "10 min",
+  },
   {
     id: 9,
     title: "Le Plateau de l'Évolution et la Persévérance",

@@ -5,7 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Droplet, Flame, Heart, Moon } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import energyBalanceCover from "../../../assets/images/energy-balance-coverr.webp";
+import energyBalanceCover from "../../../assets/images/blog/covers/energy-balance-coverr.webp";
 import { EnergyBalanceGraphCard } from "../../_components/EnergyBalanceGraph";
 
 export const metadata: Metadata = {
